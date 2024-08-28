@@ -28,7 +28,9 @@ public class E01_Variable {
 		int a = 10;
 		System.out.println(a);
 		
-				
+		//동일한 변수타입의 변수를 만드는 경우
+		int n1 = 10, n2 = 20;
+		System.out.println(n1 + " " + n2);
 	}
 
 }
