@@ -31,6 +31,13 @@ public class E01_Variable {
 		//동일한 변수타입의 변수를 만드는 경우
 		int n1 = 10, n2 = 20;
 		System.out.println(n1 + " " + n2);
+		
+		//정수형 변수 3개 선언
+		int num1, num2, num3;
+		//num1, num2, num3를 전부 0으로 초기화
+		num1 = num2 = num3 = 0;
+		
+		System.out.println(num1 + " " + num2 + " " + num3);
 	}
 
 }
