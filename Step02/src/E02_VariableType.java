@@ -40,8 +40,32 @@ public class E02_VariableType {
 		b += 1;
 		System.out.println(b);
 		
+		float f = 3.1415f;
+		System.out.println(f);
 		
+		double d = 3.1415;
+		System.out.println(d);
 		
+		char c1 = 'A';
+		System.out.println(c1);
+		
+		int i1 = c1;
+		System.out.println(i1);
+		
+		char c2 = '가';
+		int i2 = c2;
+		System.out.println(i2);
+		
+		boolean flag = true;
+		System.out.println(flag);
+		flag = false;
+		System.out.println(flag);
+		
+		//문자열
+		String str = "안녕하세요";
+		System.out.println(str);
+		str = "Hello World";
+		System.out.println(str);
 		
 	}
 }
