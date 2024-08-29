@@ -18,15 +18,19 @@ public class E11_Operator {
 		
 		int a = 10;
 		
-		System.out.println(a);
-		System.out.println(a++);
-		System.out.println(a);
+		System.out.println(a); //10
+		System.out.println(a++);//10
+		System.out.println(a);//11
 		
 		int b = 10;
 		
-		System.out.println(a);
-		System.out.println(++a);
-		System.out.println(a);
+		System.out.println(b);
+		System.out.println(++b);
+		System.out.println(b);
+		
+		int n1 = 5, n2 = 3;
+		int result = n1++ + 5 * ++n2 + n1;
+		System.out.println(result);
 	}
 
 }
