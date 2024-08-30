@@ -17,6 +17,10 @@ public class E05_InputNumber {
 		System.out.print("실수 입력 > ");
 		double f = sc.nextDouble();
 		System.out.println("f : " + f);
+		
+		System.out.print("숫자 입력 > ");
+		int n3 = sc.nextInt(16);
+		System.out.println("n2 : " + n3);
 	}
 }
 
