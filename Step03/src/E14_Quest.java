@@ -29,8 +29,7 @@ public class E14_Quest {
 		
 		//-------------------------------
 		switch(score / 10) {
-		case 10:
-		case 9:
+		case 10, 9:
 			System.out.println("A");
 			break;
 		case 8:
