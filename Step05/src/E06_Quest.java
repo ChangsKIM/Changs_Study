@@ -16,7 +16,6 @@ public class E06_Quest {
 
 		System.out.print("숫자 입력 : ");
 		int line = sc.nextInt();
-
 		for (int i = 0; i < line; i++) {
 			//공백 찍는 부분
 			for (int j = 0; j < line - i - 1; j++) {
