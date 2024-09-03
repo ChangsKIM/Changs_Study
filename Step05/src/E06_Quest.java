@@ -28,6 +28,16 @@ public class E06_Quest {
 			}
 			System.out.println();
 		}
+		System.out.println("--------");
+		for (int i = 0; i < line; i++) {
+			for (int j = 0; j < line; j++) {
+				if(j < line - i - 1 )
+					System.out.print(" ");
+				else
+					System.out.print("*");
+			}
+			System.out.println();
+		}
 	}
 
 }
