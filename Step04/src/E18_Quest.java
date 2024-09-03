@@ -19,7 +19,7 @@ public class E18_Quest {
 		
 		int age = 0;
 		
-		do {
+		do{
 			System.out.print("나이 입력(0보다 큰값만 입력하세요) : ");
 			age = sc.nextInt();
 			if(age <= 0) System.out.println("나이를 잘못 입력하셨습니다.");
