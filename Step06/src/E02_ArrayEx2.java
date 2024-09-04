@@ -11,7 +11,18 @@ public class E02_ArrayEx2 {
 		for(int i=0;i<arr1.length;i++) {
 			System.out.println(arr1[i]);
 		}
+		System.out.println("-------");
 		//배열 생성과 동시에 초기화 하는 방법 - 2
+		int[] arr2 = new int[] {10,11,12,13,14};
+		
+		for(int i=0;i<arr2.length;i++) {
+			System.out.println(arr2[i]);
+		}
+		
 	}
 
 }
+
+
+
+
