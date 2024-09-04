@@ -10,14 +10,14 @@ public class E06_Quest {
 	public static void main(String[] args) {
 		//1. 배열 선언, 총합 저장할 변수
 		int[] arr = new int[10];
-		int sum = 0, max = 0;
+		int sum = 0, max = 0, min = 0;
 		Scanner sc = new Scanner(System.in);
 		//2. 배열에 숫자 입력
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print("숫자 입력 > ");
 			arr[i] = sc.nextInt();
 		}		
-		max = arr[0];
+		max = min = arr[0];
 		//3. 총합, 최대값
 		for (int i = 0; i < arr.length; i++) {
 			sum += arr[i];
@@ -25,10 +25,15 @@ public class E06_Quest {
 			if(max < arr[i]) {
 				max = arr[i];
 			}
+			
+			if(min > arr[i]) {
+				min = arr[i];
+			}
 		}
 		//4. 결과 출력
 		System.out.println("총합 : " + sum);
 		System.out.println("최대값 : " + max);
+		System.out.println("최소값 : " + min);
 	}
 
 }
