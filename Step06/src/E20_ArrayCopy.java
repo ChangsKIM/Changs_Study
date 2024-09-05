@@ -14,6 +14,21 @@ public class E20_ArrayCopy {
 		arr = temp;
 		//4. 결과 출력
 		System.out.println(Arrays.toString(arr));
+		
+		//--------------------------------------
+		int[] arr2 = {1,2,3,4,5};
+		int[] arr3 = new int[arr2.length + 5];
+		
+		System.arraycopy(arr2, 0, arr3, 0, arr2.length);
+		System.out.println(Arrays.toString(arr3));
 	}
 
 }
+
+
+
+
+
+
+
+
