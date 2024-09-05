@@ -21,6 +21,18 @@ public class E11_Quest {
 			arr[i] = sc.nextInt();
 		}
 		System.out.println(Arrays.toString(arr));
+		String odd = "홀수 출력 : ";
+		String even = "짝수 출력 : ";
+		
+		for(int n : arr) {
+			if(n % 2 == 1) {
+				odd += n + " ";
+			} else {
+				even += n + " ";
+			}
+		}
+		System.out.println(odd);
+		System.out.println(even);
 		
 	}
 
