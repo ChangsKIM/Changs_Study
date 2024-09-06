@@ -32,6 +32,11 @@ public class E25_Quest {
 				arr[idx++] = sc.nextInt();
 			}else if(no == 3) {
 				//전체 출력
+				System.out.println("전체 데이터를 출력합니다....");
+				for (int i = 0; i < idx; i++) {
+					System.out.print(arr[i] + " ");
+				}
+				System.out.println();
 			}
 		}
 	}
