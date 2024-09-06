@@ -36,9 +36,11 @@ public class E25_Quest {
 				System.out.print("삭제할 숫자 입력 : ");
 				int n = sc.nextInt();				
 				//삭제할 데이터를 찾음
+				boolean flag = false;
 				for(int i=0;i<idx;i++) {
 					//	1. 삭제할 데이터가 있는 경우 데이터를 한칸씩 땡겨옴
 					if(arr[i] == n) {
+						flag = true;
 						for(int j = i;j<idx-1;j++) {
 							arr[j] = arr[j+1];
 						}
@@ -46,9 +48,11 @@ public class E25_Quest {
 						break;
 					}
 				}
-				
-				// '데이터 삭제 완료' 출력
-				// '삭제할 데이터가 없습니다' 출력
+				if(flag)
+					System.out.println("데이터 삭제 완료.");
+				else
+					System.out.println("삭제할 데이터가 없습니다.");
+					
 				
 			}else if(no == 3) {
 				//전체 출력
