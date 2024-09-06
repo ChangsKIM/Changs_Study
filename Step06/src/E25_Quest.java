@@ -7,6 +7,7 @@ public class E25_Quest {
 		//Scanner 생성
 		int[] arr = new int[10];
 		Scanner sc = new Scanner(System.in);
+		int idx = 0;
 		//반복문 - 무한루프
 		while(true) {
 			System.out.println("1 - 숫자 추가");
@@ -18,6 +19,18 @@ public class E25_Quest {
 			
 			if(no == 0) {
 				break;
+			}else if(no == 1) {
+				//숫자 입력 받아서
+				System.out.print("추가할 숫자 입력 > ");
+				int n = sc.nextInt();
+				//단 배열에 저장할 공간이 없으면 배열길이 5씩 늘린 후에 저장
+				if(idx == arr.length) {
+					int[] temp = new int[arr.length+5];
+					System.arraycopy(arr, 0, temp, 0, arr.length);
+					arr = temp;
+				}
+				//배열에 추가
+				arr[idx++] = n;
 			}
 		}
 	}
