@@ -30,6 +30,26 @@ public class E25_Quest {
 				System.out.print("추가할 숫자 입력 > ");
 				//배열에 추가
 				arr[idx++] = sc.nextInt();
+			}else if(no == 2) {
+				//삭제할 데이터 입력
+				System.out.println("데이터 삭제를 시작합니다....");
+				System.out.print("삭제할 숫자 입력 : ");
+				int n = sc.nextInt();				
+				//삭제할 데이터를 찾음
+				for(int i=0;i<idx;i++) {
+					//	1. 삭제할 데이터가 있는 경우 데이터를 한칸씩 땡겨옴
+					if(arr[i] == n) {
+						for(int j = i;j<idx-1;j++) {
+							arr[j] = arr[j+1];
+						}
+						idx--;
+						break;
+					}
+				}
+				
+				// '데이터 삭제 완료' 출력
+				// '삭제할 데이터가 없습니다' 출력
+				
 			}else if(no == 3) {
 				//전체 출력
 				System.out.println("전체 데이터를 출력합니다....");
