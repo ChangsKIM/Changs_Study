@@ -26,8 +26,11 @@ public class TV {
 	
 	void powerOnOff() {
 		//메서드를 실행 할때마다 전원이 켜졌다가 꺼졌다가 해야함
+		power = !power;
 		//전원 값이 true --> TV 전원 On
+		if(power) System.out.println("TV 전원 On");
 		//전원 값이 false --> TV 전원 Off
+		else System.out.println("TV 전원 Off");
 	}
 
 }
