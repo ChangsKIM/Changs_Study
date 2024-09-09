@@ -19,6 +19,8 @@ public class TV {
 	int volume;
 	final int MAX_CHANNEL = 766;
 	final int MIN_CHANNEL = 1;
+	final int MAX_VOLUME = 50;
+	final int MIN_VOLUME = 0;
 	
 	void init() {
 		//초기화
@@ -51,6 +53,34 @@ public class TV {
 		
 		channel = channel == MIN_CHANNEL ? MAX_CHANNEL : channel - 1;
 		System.out.println("현재 채널 : " + channel);
+	}
+	
+	//음소거OnOff 
+	void muteOnOff() {
+		if(!power) return;
+		mute = !mute;
+		System.out.println(mute ? "음소거 적용" : "음소거 해제");
+	}
+	
+	void volumeUp() {
+		if(!power) return;
+		if(mute) muteOnOff();
+		
+		if(volume < MAX_VOLUME)
+			volume++;
+		
+		System.out.println("현재 음량 : " + volume);
+		
+	}
+	void volumeDown() {
+		if(!power) return;
+		if(mute) muteOnOff();
+		
+		if(volume > MIN_VOLUME)
+			volume--;
+		
+		System.out.println("현재 음량 : " + volume);
+		
 	}
 }
 
