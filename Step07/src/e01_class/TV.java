@@ -33,7 +33,7 @@ public class TV {
 		else System.out.println("TV 전원 Off");
 	}
 	
-	//채널 Up
+	//채널Up ==> 채널값 증가, 최대값에 증가하면 첫번째 채널로 이동, 옮긴 채널값을 출력
 	void channelUp() {
 		if(!power) return;
 		//메서드 실행시 채널 1씩 증가  %    +    =
@@ -44,6 +44,13 @@ public class TV {
 		System.out.println("현재 채널 : " + channel);
 	}
 	
+	//채널Down ==> 채널값 감소, 최소값에 감소하면 마지막 채널로 이동, 옮긴 채널값을 출력
+	void channelDown() {
+		if(!power) return;
+		
+		channel = channel == 1 ? 766 : channel - 1;
+		System.out.println("현재 채널 : " + channel);
+	}
 }
 
 

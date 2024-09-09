@@ -11,6 +11,8 @@ public class TVMain {
 		
 		for(int i=0;i<766;i++)
 			tv.channelUp();
+		for(int i=0;i<30;i++)
+			tv.channelDown();
 	}
 
 }
