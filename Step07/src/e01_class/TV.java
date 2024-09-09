@@ -32,7 +32,18 @@ public class TV {
 		//전원 값이 false --> TV 전원 Off
 		else System.out.println("TV 전원 Off");
 	}
-
+	
+	//채널 Up
+	void channelUp() {
+		if(!power) return;
+		//메서드 실행시 채널 1씩 증가  %    +    =
+		//채널이 값이 최대값일떄 증가하면 1번으로 이동
+		channel = channel % 766 + 1; 
+		
+		//현재 채널 번호 출력
+		System.out.println("현재 채널 : " + channel);
+	}
+	
 }
 
 
