@@ -17,6 +17,8 @@ public class TV {
 	boolean mute;
 	int channel;
 	int volume;
+	final int MAX_CHANNEL = 766;
+	final int MIN_CHANNEL = 1;
 	
 	void init() {
 		//초기화
@@ -38,8 +40,7 @@ public class TV {
 		if(!power) return;
 		//메서드 실행시 채널 1씩 증가  %    +    =
 		//채널이 값이 최대값일떄 증가하면 1번으로 이동
-		channel = channel % 766 + 1; 
-		
+		channel = channel % MAX_CHANNEL + 1; 
 		//현재 채널 번호 출력
 		System.out.println("현재 채널 : " + channel);
 	}
@@ -48,7 +49,7 @@ public class TV {
 	void channelDown() {
 		if(!power) return;
 		
-		channel = channel == 1 ? 766 : channel - 1;
+		channel = channel == MIN_CHANNEL ? MAX_CHANNEL : channel - 1;
 		System.out.println("현재 채널 : " + channel);
 	}
 }
