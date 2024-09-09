@@ -7,6 +7,8 @@ public class EmployeeMain {
 		Employee emp = new Employee();
 		emp.init("20101111", "김철수", false, "부장", "총무부", 7800);
 		emp.printEmployeeInfo();
+		System.out.println(emp.updateSalary(9000));
+		System.out.println(emp.updateSalary(2300));
 	}
 
 }
