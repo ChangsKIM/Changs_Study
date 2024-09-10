@@ -16,7 +16,7 @@ public class E01_ArrayParam {
 	 * 해당 값들을 ary 배열로 만들어서 처리
 	 * 추가적으로 다른 데이터가 필요하면 
 	 * 가변길이로 선언한 매개변수 앞에 변수 선언을 해야됨
-	 * void printArgs(String str, int ... ary)
+	 * void printArgs(String str, int ... ary)`
 	 */
 	static void printArgs(int ... ary) {
 		for (int i = 0; i < ary.length; i++) {
