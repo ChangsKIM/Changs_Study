@@ -20,7 +20,22 @@ public class Person {
 		System.out.println("Person 기본 생성자");
 	}
 	
+	Person(String n){
+		System.out.println("Person(String) 생성자");
+		name = n;
+	}
+	//이름 나이 받아서 초기화 하는 생성자
+	Person(String n, int a){
+		System.out.println("Person(String, int) 생성자");
+		name = n;
+		age = a;
+	}
+	
+	
 	void printPersonInfo() {
 		System.out.println(name + " / " + age);
 	}
 }
+
+
+
