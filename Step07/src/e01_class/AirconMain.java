@@ -3,8 +3,24 @@ package e01_class;
 public class AirconMain {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		AirCon air = new AirCon();
+		air.init();
+		air.powerOnOff();
+		for(int i=0;i<30;i++)
+			air.tempDown();
 
+		air.changeWind();
+		air.changeWind();
+		air.changeWind();
+		air.changeWind();
+		air.changeWind();
+		
+		air.changeMode();
+		air.changeMode();
+		air.changeMode();
+		air.changeMode();
+		air.changeMode();
+		
 	}
 
 }
