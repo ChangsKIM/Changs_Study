@@ -33,12 +33,19 @@ public class E02_SortArray {
 			//비교할 인덱스 번호
 			//  제일 작은 값이 있는 인덱스 저장할 변수 선언 초기화는 기준 인덱스
 			int idx = i;
-			for(int j=i+1;j<arr.length-1;j++) {
+			for(int j=i+1;j<arr.length;j++) {
 				//	제일 작은 값이 있는 인덱스 번호를 저장
-				
+				if(arr[idx] > arr[j]){
+					idx = j;
+				}
 			}
 			//  제일 작은 값이 있는 인덱스와 기준 인덱스 값과 교환
+			int temp = arr[i];
+			arr[i] = arr[idx];
+			arr[idx] = temp;
+			
 			//	배열 내용을 출력
+			printArray(i+1, arr);
 		}
 		
 	}
@@ -47,9 +54,16 @@ public class E02_SortArray {
 	public static void main(String[] args) {
 		int[] arr1 = {8, 4, 6, 9, 7, 1};
 		int[] arr2 = {23,45,2,5,6,2,65,233,2};
+		int[] arr3 = {8, 4, 6, 9, 7, 1};
+		int[] arr4 = {23,45,2,5,6,2,65,233,2};
 		buble(arr1);
 		System.out.println("--------------------");
 		buble(arr2);
+		System.out.println("--------------------");
+		select(arr3);
+		System.out.println("--------------------");
+		select(arr4);
+		
 	}
 
 }
