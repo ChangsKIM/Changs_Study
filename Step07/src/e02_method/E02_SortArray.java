@@ -1,5 +1,7 @@
 package e02_method;
 
+import java.util.Scanner;
+
 public class E02_SortArray {
 	static void printArray(int pass, int[] arr) {
 		System.out.print(pass + "pass : ");
@@ -50,6 +52,26 @@ public class E02_SortArray {
 		
 	}
 	
+	static void insert() {
+		Scanner sc = new Scanner(System.in);
+		int[] arr = new int[6];
+		
+		for(int i=0;i<arr.length;i++) {
+			//1. 배열에 숫자 입력
+			System.out.print("숫자 입력 : ");
+			arr[i] = sc.nextInt();
+			//2. 정렬
+			for (int j = i; j > 0; j--) {
+				if (arr[j] < arr[j - 1]) {
+					int temp = arr[j];
+					arr[j] = arr[j - 1];
+					arr[j - 1] = temp;
+				}
+			}
+			//3. 배열 출력
+			printArray(i+1, arr);
+		}
+	}
 	
 	public static void main(String[] args) {
 		int[] arr1 = {8, 4, 6, 9, 7, 1};
@@ -63,6 +85,8 @@ public class E02_SortArray {
 		select(arr3);
 		System.out.println("--------------------");
 		select(arr4);
+		System.out.println("--------------------");
+		insert();
 		
 	}
 
