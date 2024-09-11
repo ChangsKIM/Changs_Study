@@ -15,5 +15,24 @@ package e06_static;
  * 
  */
 public class Card {
+	private String name;
+	private int cardNo;
+	
+	private static int cardNoSeq = 1000;
 
+	public Card(String name) {
+		this.name = name;
+		cardNo = cardNoSeq++;
+	}
+
+	@Override
+	public String toString() {
+		return name + " / " + cardNo;
+	}
 }
+
+
+
+
+
+
