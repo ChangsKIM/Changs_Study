@@ -8,7 +8,7 @@ package e04_access;
  * 		public : 누구든지 접근이 가능
  */
 public class Person {
-	String name;
+	private String name;
 	private int age;
 
 	Person(String name, int age) {
@@ -23,6 +23,15 @@ public class Person {
 	public int getAge() {
 		return age;
 	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
 	
 	@Override
 	public String toString() {
