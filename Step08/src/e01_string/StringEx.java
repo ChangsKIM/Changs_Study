@@ -31,7 +31,31 @@ public class StringEx {
 		System.out.println(str3.toLowerCase());
 		//알파벳을 전부 대문자로 변환
 		System.out.println(str3.toUpperCase());
+		//글자 개수
+		System.out.println(str3.length());
+		//문자열 부분 추출 - 10번 인덱스부터 마지막 인덱스까지 문자열을 잘라내서 리턴 
+		System.out.println(str3.substring(10));
+		//문자열 부분 추출 - 10번 인덱스부터 15 인덱스전까지 문자열을 잘라내서 리턴 
+		System.out.println(str3.substring(10, 15));
+		//문자열 바꾸기
+		System.out.println(str3.replace("World", "Hell"));
 		
+		String str4 = "          Hello World          ";
+		//문자열 개수랑 문자열 출력
+		System.out.println(str4.length());
+		System.out.println(str4);
+		//문자열 양쪽에 있는 필요없는 공백을 제거
+		System.out.println(str4.trim());
+		System.out.println(str4.trim().length());
+		
+		String str5 = "java,html,css,javascript,jsp,spring";
+		//문자열을 구분자를 기준으로 잘라서 배열로 만들어줌
+		String[] result = str5.split(",");
+		System.out.println(Arrays.toString(result));
+		//문자열로된 배열을 하나의 문자열로 만들어 줌
+		//문자열과 문자열 사이에 구분자 넣어줌 --> "/"
+		String str6 = String.join("/",result);
+		System.out.println(str6);
 	}
 
 }
