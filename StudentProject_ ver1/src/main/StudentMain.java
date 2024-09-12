@@ -38,6 +38,7 @@ public class StudentMain {
 	        case 0:
 	        	return;
 	        case 1:
+	        	service.insertStudent();
 	        	break;
 	        case 2:
 	        	break;
@@ -46,12 +47,13 @@ public class StudentMain {
 	        case 4:
 	        	break;
 	        case 5:
+	        	service.printAllStudent();
 	        	break;
-	        }
-		}
-	}
+	        }//switch
+		}//while
+	}//main
 
-}
+}//class
 
 
 
