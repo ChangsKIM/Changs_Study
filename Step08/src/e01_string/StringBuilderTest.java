@@ -28,9 +28,24 @@ public class StringBuilderTest {
 		builder.delete(0, 4);
 		System.out.println(builder);
 		System.out.println(System.identityHashCode(builder));
+		System.out.println();
+		
+		StringBuffer buffer = new StringBuffer("Hello");
+		System.out.println(buffer);
+		System.out.println(System.identityHashCode(buffer));
+		buffer.append("TEST");
+		System.out.println(buffer);
+		System.out.println(System.identityHashCode(buffer));
+		
 	}
 
 }
+
+
+
+
+
+
 
 
 
