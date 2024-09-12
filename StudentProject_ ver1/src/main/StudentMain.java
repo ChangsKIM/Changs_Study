@@ -28,8 +28,14 @@ public class StudentMain {
 	        System.out.println("0. 프로그램 종료");
 	        System.out.print("원하시는 번호를 입력하세요 : ");
 	        //메뉴 번호 입력 받음
+	        int no = sc.nextInt();
 	        //0일때 반복문 종료
+	        if(no == 0) break;
 		}
 	}
 
 }
+
+
+
+
