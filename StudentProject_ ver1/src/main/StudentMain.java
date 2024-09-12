@@ -2,6 +2,8 @@ package main;
 
 import java.util.Scanner;
 
+import service.StudentService;
+
 public class StudentMain {
 	/*
 	 *		학적관리 프로그램 버전 - 1
@@ -17,6 +19,7 @@ public class StudentMain {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		StudentService service = new StudentService();
 		
 		while(true) {
 			System.out.println("학적관리 프로그램 버전 - 1");
@@ -30,7 +33,21 @@ public class StudentMain {
 	        //메뉴 번호 입력 받음
 	        int no = sc.nextInt();
 	        //0일때 반복문 종료
-	        if(no == 0) break;
+	        
+	        switch(no) {
+	        case 0:
+	        	return;
+	        case 1:
+	        	break;
+	        case 2:
+	        	break;
+	        case 3:
+	        	break;
+	        case 4:
+	        	break;
+	        case 5:
+	        	break;
+	        }
 		}
 	}
 
