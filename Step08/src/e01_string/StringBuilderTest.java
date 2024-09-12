@@ -13,7 +13,21 @@ public class StringBuilderTest {
 		System.out.println(System.identityHashCode(str));
 		System.out.println();
 		//--------------------
+		StringBuilder builder = new StringBuilder("Hello");
+		System.out.println(builder);
+		System.out.println(System.identityHashCode(builder));
 		
+		builder.append("AAAA");
+		System.out.println(builder);
+		System.out.println(System.identityHashCode(builder));
+
+		builder.replace(0, 4, "BBBB");
+		System.out.println(builder);
+		System.out.println(System.identityHashCode(builder));
+		
+		builder.delete(0, 4);
+		System.out.println(builder);
+		System.out.println(System.identityHashCode(builder));
 	}
 
 }
