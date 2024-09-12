@@ -56,6 +56,15 @@ public class StringEx {
 		//문자열과 문자열 사이에 구분자 넣어줌 --> "/"
 		String str6 = String.join("/",result);
 		System.out.println(str6);
+		
+		//문자열 포멧 - %s, %d, %f, %x, %X, %b, %c, %f, %g
+		System.out.println(String.format("이름 : %s, 나이 : %d", "김철수", 20));
+		System.out.println(String.format("%d %x %o", 10,10,10));
+		System.out.println(String.format("%d %X %o", 10,10,10));
+		System.out.println(String.format("%b %c", true, '가'));
+		System.out.println(String.format("%f %g", 3.1415, 3.1415));
+		
+		
 	}
 
 }
