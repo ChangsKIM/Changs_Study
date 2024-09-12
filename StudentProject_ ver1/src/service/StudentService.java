@@ -17,6 +17,15 @@ public class StudentService {
 		arr = new Student[5];
 	}
 	
+	//추가
+	
+	//삭제
+	
+	//검색
+	
+	//수정
+	
+	//전체 출력
 	
 }
 
