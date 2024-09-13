@@ -41,6 +41,7 @@ public class StudentMain {
 	        	service.insertStudent();
 	        	break;
 	        case 2:
+	        	service.searchStudent();
 	        	break;
 	        case 3:
 	        	break;

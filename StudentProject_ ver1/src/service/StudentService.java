@@ -48,12 +48,7 @@ public class StudentService {
 	//삭제
 	
 	//검색
-	public int searchStudent() {
-		Scanner sc = new Scanner(System.in);
-		String studentNo;
-		//학번 입력 받음
-		System.out.print("검색할 학번 입력 : ");
-		studentNo = sc.nextLine(); 
+	private int searchStudent(String studentNo) {
 		//반복문 이용해서 동일 학번을 찾음
 		for(int i=0;i<arr.length;i++) {
 			//찾으면 해당 인덱스 번호 리턴
@@ -62,6 +57,20 @@ public class StudentService {
 		}
 		//검색 결과가 없으면 -1
 		return -1;
+	}
+	public void searchStudent() {
+		Scanner sc = new Scanner(System.in);
+		String studentNo;
+		//학번 입력 받음
+		System.out.print("검색할 학번 입력 : ");
+		studentNo = sc.nextLine(); 
+		
+		int index = searchStudent(studentNo);
+		
+		if(index == -1)
+			System.out.println("해당 학생 정보가 없습니다.");
+		else
+			System.out.println(arr[index]);
 	}
 	//수정
 	
