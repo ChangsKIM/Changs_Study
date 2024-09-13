@@ -3,7 +3,11 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class E19_Lotto {
-
+	//1~45 숫자 리턴하는 메서드
+	public static int generateLottoNumber() {
+		Random r = new Random();
+		return r.nextInt(45) + 1;
+	}
 	//중복 체크하는 메서드
 	public static boolean isDuplicateNumber(int[] arr, int n) {
 		
@@ -25,7 +29,7 @@ public class E19_Lotto {
 
 			//랜덤으로 배열에 숫자를 저장, 저장할 범위 : 1~10
 			for(int i=0;i<arr.length;i++) {
-				int n = r.nextInt(45) + 1;
+				int n = generateLottoNumber();
 				if(isDuplicateNumber(arr, n)) {
 					i--;
 					continue;
