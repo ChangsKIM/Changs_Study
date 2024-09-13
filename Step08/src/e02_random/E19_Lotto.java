@@ -4,6 +4,17 @@ import java.util.Random;
 
 public class E19_Lotto {
 
+	//중복 체크하는 메서드
+	public static boolean isDuplicateNumber(int[] arr, int n) {
+		
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i] == n)
+				return true;
+		}
+		
+		return false;
+	}
+	
 	public static void main(String[] args) {
 		//랜덤 클래스 생성
 		Random r = new Random();
@@ -14,14 +25,12 @@ public class E19_Lotto {
 
 			//랜덤으로 배열에 숫자를 저장, 저장할 범위 : 1~10
 			for(int i=0;i<arr.length;i++) {
-				arr[i] = r.nextInt(45) + 1;
-				for(int j = 0; j < i ; j++) {
-					if(arr[i] == arr[j]) {
-						i--;
-						break;
-					}
-						
+				int n = r.nextInt(45) + 1;
+				if(isDuplicateNumber(arr, n)) {
+					i--;
+					continue;
 				}
+				arr[i] = n;
 			}
 			//출력
 			System.out.println(Arrays.toString(arr));
