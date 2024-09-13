@@ -56,7 +56,26 @@ public class StudentService {
 	}//insertStudent
 	
 	//삭제
-	
+	public void deleteStudent() {
+		Scanner sc = new Scanner(System.in);
+		String studentNo;
+		//학번 입력 받음
+		System.out.println("학생 정보 삭제를 시작합니다.....");
+		System.out.print("삭제할 학번 입력 : ");
+		studentNo = sc.nextLine(); 
+		
+		int index = searchStudent(studentNo);
+		
+		if(index == -1) {
+			System.out.println("삭제할 학생 정보가 없습니다.");
+			return;
+		}
+		
+		for(int i = index;i < idx - 1; i++) {
+			arr[i] = arr[i+1];
+		}
+		idx--;
+	}
 	//수정
 	public void updateStudent() {
 		Scanner sc = new Scanner(System.in);
@@ -121,6 +140,17 @@ public class StudentService {
 		for(int i=0;i<idx;i++)
 			System.out.println(arr[i].toString());
 		
+	}
+	
+	//학생 정보 이름 일부를 검색하여 일부가 일치하면 출력
+	public void searchStudentName() {
+		//학생 이름 일부 입력
+		
+		//반복문
+		//	입력한 검색어가 학생 이름에 있는지 확인 후 출력
+		// 	없으면 다음 반복 진행
+		
+		//검색 결과가 없으면, '해당 검색결과가 없습니다.' 메세지 출력
 	}
 	
 	
