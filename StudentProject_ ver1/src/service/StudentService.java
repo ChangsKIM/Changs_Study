@@ -48,7 +48,16 @@ public class StudentService {
 	//삭제
 	
 	//검색
-	
+	public int searchStudent() {
+		//학번 입력 받음
+		
+		//반복문 이용해서 동일 학번을 찾음
+		
+		//찾으면 해당 인덱스 번호 리턴
+		
+		//검색 결과가 없으면 -1
+		return -1;
+	}
 	//수정
 	
 	//전체 출력
