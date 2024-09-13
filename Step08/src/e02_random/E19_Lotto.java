@@ -1,5 +1,4 @@
 package e02_random;
-import java.util.Arrays;
 import java.util.Random;
 
 public class E19_Lotto {
@@ -8,6 +7,15 @@ public class E19_Lotto {
 		Random r = new Random();
 		return r.nextInt(45) + 1;
 	}
+	//로또번호 한셋트 출력하는 메서드
+	//숫자를 두자리씩 출력
+	public static void printLottoNumber(int[] arr) {
+		for(int n : arr){
+			System.out.print(String.format("%02d ", n));
+		}
+		System.out.println();
+	}
+	
 	//중복 체크하는 메서드
 	public static boolean isDuplicateNumber(int[] arr, int n) {
 		
@@ -37,7 +45,7 @@ public class E19_Lotto {
 				arr[i] = n;
 			}
 			//출력
-			System.out.println(Arrays.toString(arr));
+			printLottoNumber(arr);
 		}
 		
 	}
