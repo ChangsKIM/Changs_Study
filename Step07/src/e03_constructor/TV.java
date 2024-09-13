@@ -19,13 +19,16 @@ public class TV {
 	int volume;
 	final int MAX_CHANNEL = 766;
 	final int MIN_CHANNEL = 1;
-	final int MAX_VOLUME = 50;
+	final int MAX_VOLUME;
 	final int MIN_VOLUME = 0;
 
 	TV(){
 		//초기화
 		channel = 24;
 		volume = 10;
+		//final로 선언된 필드는 선언시 초기화를 안한다면
+		//생성자에서 반드시 초기화 시켜줘야됨
+		MAX_VOLUME = 60;
 	}
 	
 	void powerOnOff() {
