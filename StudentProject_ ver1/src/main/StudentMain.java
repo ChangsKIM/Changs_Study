@@ -46,6 +46,7 @@ public class StudentMain {
 	        case 3:
 	        	break;
 	        case 4:
+	        	service.updateStudent();
 	        	break;
 	        case 5:
 	        	service.printAllStudent();

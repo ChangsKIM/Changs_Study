@@ -44,12 +44,47 @@ public class StudentService {
 		//arr[idx] = student;
 		//4. idx 증가
 		//idx++;
+		//배열 길이 늘리기
+		if(idx == arr.length) {
+			Student[] temp = new Student[arr.length+5];
+			System.arraycopy(arr, 0, temp, 0, arr.length);
+			arr = temp;
+		}
 		arr[idx++] = 
 				new Student(studentNo, studentName, majorName, score);
 		
 	}//insertStudent
 	
 	//삭제
+	
+	//수정
+	public void updateStudent() {
+		Scanner sc = new Scanner(System.in);
+		String studentNo;
+		//학번 입력 받음
+		System.out.println("학생 정보 수정을 시작합니다.....");
+		System.out.print("수정할 학번 입력 : ");
+		studentNo = sc.nextLine(); 
+		
+		int index = searchStudent(studentNo);
+		
+		if(index == -1) {
+			System.out.println("해당 학생 정보가 없습니다.");
+			return;
+		}
+		System.out.print("수정할 이름 입력 : ");
+		String studentName = sc.nextLine();
+		arr[index].setStudentName(studentName);
+		System.out.print("수정할 학과명 입력 : ");
+		String majorName = sc.nextLine();
+		arr[index].setMajorName(majorName);
+		System.out.print("수정할 학생 평점 입력 : ");
+		double score = sc.nextDouble();
+		arr[index].setScore(score);
+		
+		System.out.println("학생정보 수정이 완료되었습니다.");
+		
+	}
 	
 	//검색
 	private int searchStudent(String studentNo) {
@@ -77,7 +112,7 @@ public class StudentService {
 		else
 			System.out.println(arr[index]);
 	}
-	//수정
+	
 	
 	//전체 출력
 	public void printAllStudent() {
