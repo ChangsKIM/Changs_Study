@@ -57,10 +57,14 @@ public class StringEx {
 		String str6 = String.join("/",result);
 		System.out.println(str6);
 		
-		//문자열 포멧 - %s, %d, %f, %x, %X, %b, %c, %f, %g
+		//문자열 포멧 - %s, %d, %f, %x, %X, %b, %c, %g
+		// %10d ---> 10출력공간을 확보해서 출력 양수면 오른쪽 정렬
+		//			 음수면 왼쪽 정렬
+		// %.2f ---> 소수점 둘째자리까지 표시, 셋째 자리에서 반올림
 		System.out.println(String.format("이름 : %s, 나이 : %d", "김철수", 20));
 		System.out.println(String.format("%d %x %o", 10,10,10));
 		System.out.println(String.format("%d %X %o", 10,10,10));
+		System.out.println(String.format("%05d", 10));
 		System.out.println(String.format("%b %c", true, '가'));
 		System.out.println(String.format("%f %g", 3.1415, 3.1415));
 		
