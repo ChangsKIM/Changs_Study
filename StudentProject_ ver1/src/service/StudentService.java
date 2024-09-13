@@ -144,13 +144,25 @@ public class StudentService {
 	
 	//학생 정보 이름 일부를 검색하여 일부가 일치하면 출력
 	public void searchStudentName() {
+		System.out.println("학생 이름 일부로 검색을 시작합니다.");
+		Scanner sc = new Scanner(System.in);
 		//학생 이름 일부 입력
+		System.out.print("학생 이름 일부 : ");
+		String name = sc.nextLine();
 		
+		int count = 0;
 		//반복문
+		for(int i=0;i<idx;i++) {
 		//	입력한 검색어가 학생 이름에 있는지 확인 후 출력
-		// 	없으면 다음 반복 진행
+			if(arr[i].getStudentName().indexOf(name) != -1) {
+				System.out.println(arr[i]);
+				count++;
+			}
+		}
 		
 		//검색 결과가 없으면, '해당 검색결과가 없습니다.' 메세지 출력
+		if(count == 0) System.out.println("해당 검색 결과가 없습니다.");
+		else System.out.println(count +"건이 검색 되었습니다.");
 	}
 	
 	

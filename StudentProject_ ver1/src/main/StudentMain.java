@@ -28,6 +28,7 @@ public class StudentMain {
 	        System.out.println("3. 학생 데이터 삭제");
 	        System.out.println("4. 학생 데이터 수정");
 	        System.out.println("5. 학생 데이터 전체 출력");
+	        System.out.println("6. 학생 데이터 이름으로 검색");
 	        System.out.println("0. 프로그램 종료");
 	        System.out.print("원하시는 번호를 입력하세요 : ");
 	        //메뉴 번호 입력 받음
@@ -51,6 +52,9 @@ public class StudentMain {
 	        	break;
 	        case 5:
 	        	service.printAllStudent();
+	        	break;
+	        case 6:
+	        	service.searchStudentName();
 	        	break;
 	        }//switch
 		}//while
