@@ -22,7 +22,22 @@ public class StudentService {
 			instance = new StudentService();
 		return instance;
 	}
-
+	
+	//학생정보를 학번으로 검색
+	private Student searchStudent(String studentNo) {
+		//매개변수로 받은 학번과 동일한 학번이 있으면 해당 객체를 student에 저장
+//		for(int i=0;i<list.size();i++) {
+//			if(list.get(i).getStudentNo().equals(studentNo))
+//				return list.get(i);
+//		}
+		for(Student std : list) {
+			if(std.getStudentNo().equals(studentNo)) {
+				return std;//검색 결과가 있을때 해당 객체 리턴
+			}
+		}		
+		return null;//검색 결과 없을때
+	}
+	
 	public void insertStudent() {
 		//학생정보 입력
 		Scanner sc = new Scanner(System.in);
