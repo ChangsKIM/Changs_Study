@@ -11,6 +11,7 @@ public class StudentService {
 	
 	private StudentService() {
 		list = new ArrayList<Student>();
+		//샘플데이터 3~4건
 	}
 
 	public static StudentService getInstance() {
@@ -32,6 +33,7 @@ public class StudentService {
 		String majorName = sc.nextLine();
 		System.out.print("등록할 학생 평점 입력 : ");
 		double score = sc.nextDouble();
+		sc.nextLine();
 		//리스트에 학생정보 추가
 		list.add(new Student(studentNo, studentName, majorName, score));
 		
@@ -53,7 +55,10 @@ public class StudentService {
 	}
 
 	public void printAllStudent() {
-		// TODO Auto-generated method stub
+		//전체 학생 정보 출력
+		for(Student std : list) {
+			System.out.println(std);
+		}
 		
 	}
 
