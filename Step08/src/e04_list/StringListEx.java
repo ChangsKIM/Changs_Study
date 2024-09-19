@@ -15,6 +15,25 @@ public class StringListEx {
 		list.add("Oracle");
 		
 		System.out.println(list);
+		
+		//데이터 삭제
+		String result = list.remove(2);
+		System.out.println(result);
+		System.out.println(list);
+		System.out.println(list.remove("react"));
+		System.out.println(list.remove("react"));
+		System.out.println(list);
+		
+		//전체 조회 반복문
+		for(String str : list) {
+			System.out.println(str);
+		}
 	}
 
 }
+
+
+
+
+
+
