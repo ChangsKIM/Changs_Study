@@ -1,5 +1,6 @@
 package e02_random;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class GachaBox {
@@ -36,16 +37,35 @@ public class GachaBox {
 	}
 	
 	public String[] drawItem(int ea) {
+		final String[] gacha = generateGachaBox();
+		//결과값 리턴할 배열
+		String[] result = new String[ea];
 		//원하는 개수만큼 뽑아서 배열로 만들고
 		//뽑은 결과를 리턴
-		return null;
+		Random r = new Random();
+		for(int i=0;i<ea;i++) {
+			//0~gacha 길이 - 1 숫자를 랜덤으로 뽑음 - 인덱스
+			int n = r.nextInt(ea);
+			//해당 gacha 배열의 위치값이 null 이미 뽑힌값
+			//인덱스 번호를 다시 뽑음
+			if(gacha[n] == null) {
+				i--;
+				continue;
+			}
+			
+			result[i] = gacha[n];
+			gacha[n] = null;
+		}
+
+		return result;
 	}
 	
 	public static void main(String[] args) {
 		GachaBox box = new GachaBox();
-		String[] arr = box.generateGachaBox();
-		for(int i=0;i<arr.length;i++)
-			System.out.println(arr[i]);
+		for(int i=0;i<10;i++) {
+			String[] arr = box.drawItem(10);
+			System.out.println(Arrays.toString(arr));
+		}
 	}
 	
 	
