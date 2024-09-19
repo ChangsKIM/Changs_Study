@@ -43,8 +43,17 @@ public class StudentService {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("학생 정보 추가를 진행합니다........");
 		//1. 학번, 이름, 학과명, 점수를 입력
-		System.out.print("등록할 학번 입력 : ");
-		String studentNo = sc.nextLine();
+		String studentNo = "";
+		while(true) {
+			System.out.print("등록할 학번 입력 : ");
+			studentNo = sc.nextLine();
+			//학번 중복 체크
+			if(searchStudent(studentNo) != null) {
+				System.out.println("학번이 중복되었습니다. 다시 입력해 주세요");
+				continue;
+			}
+			break;			
+		}
 		System.out.print("등록할 학생이름 입력 : ");
 		String studentName = sc.nextLine();
 		System.out.print("등록할 학과명 입력 : ");
@@ -52,6 +61,8 @@ public class StudentService {
 		System.out.print("등록할 학생 평점 입력 : ");
 		double score = sc.nextDouble();
 		sc.nextLine();
+		
+		
 		//리스트에 학생정보 추가
 		list.add(new Student(studentNo, studentName, majorName, score));
 		
