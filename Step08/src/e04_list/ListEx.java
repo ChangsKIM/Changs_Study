@@ -24,8 +24,11 @@ public class ListEx {
 		for(int i = 0;i < list.size(); i++) {
 			System.out.println(list.get(i));
 		}
-		//데이터 삭제
-		list.
+		//데이터 삭제 - index를 이용해서 삭제
+		list.remove(3);
+		//데이터 삭제 - 동일한 값에 해당하는 데이터 삭제
+		list.remove(new Integer(20));
+		System.out.println(list);
 	}
 
 }
