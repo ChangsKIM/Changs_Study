@@ -12,6 +12,9 @@ public class StudentService {
 	private StudentService() {
 		list = new ArrayList<Student>();
 		//샘플데이터 3~4건
+		list.add(new Student("S001", "홍길동", "컴퓨터공학과", 3.5));
+		list.add(new Student("S002", "김철수", "전자공학과", 3.8));
+		list.add(new Student("S003", "이영희", "수학과", 4.0));
 	}
 
 	public static StudentService getInstance() {
