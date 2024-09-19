@@ -19,7 +19,7 @@ public class StudentMain {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		StudentService service = new StudentService();
+		StudentService service = StudentService.getInstance();
 		
 		while(true) {
 			System.out.println("학적관리 프로그램 버전 - 1");
