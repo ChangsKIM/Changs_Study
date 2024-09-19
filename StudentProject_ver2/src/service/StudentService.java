@@ -69,8 +69,19 @@ public class StudentService {
 	}
 
 	public void searchStudent() {
-		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String studentNo;
+		//학번 입력 받음
+		System.out.println("학생 정보 검색을 시작합니다.....");
+		System.out.print("검색할 학번 입력 : ");
+		studentNo = sc.nextLine(); 
 		
+		Student std = searchStudent(studentNo);
+		
+		if(std == null)
+			System.out.println("해당 학생 정보가 없습니다.");
+		else
+			System.out.println(std);
 	}
 
 	public void deleteStudent() {
