@@ -1,6 +1,6 @@
 package e02_random;
 
-import java.util.Arrays;
+import java.util.Random;
 
 public class GachaBox {
 	private final int[] GRADE_EA;
@@ -24,9 +24,14 @@ public class GachaBox {
 			for(int j=0;j<GRADE_EA[i];j++)
 				arr[idx++] = grade[i];
 		}
-		
+		Random r = new Random();
 		//arr내용을 랜덤으로 섞음
-		
+		for(int i=0;i<arr.length;i++) {
+			int n = r.nextInt(arr.length);
+			String temp = arr[i];
+			arr[i] = arr[n];
+			arr[n] = temp;
+		}
 		return arr;
 	}
 	
