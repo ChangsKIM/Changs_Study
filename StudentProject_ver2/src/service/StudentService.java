@@ -85,7 +85,19 @@ public class StudentService {
 	}
 
 	public void deleteStudent() {
-		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String studentNo;
+		//학번 입력 받음
+		System.out.println("학생 정보 삭제를 시작합니다.....");
+		System.out.print("삭제할 학번 입력 : ");
+		studentNo = sc.nextLine(); 
+		
+		Student std = searchStudent(studentNo);
+		
+		if(std == null)
+			System.out.println("삭제할 학생 정보가 없습니다.");
+		else
+			list.remove(std);
 		
 	}
 
