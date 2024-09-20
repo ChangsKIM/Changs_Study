@@ -2,7 +2,7 @@ package e03_super;
 
 public class Person extends Animal{
 	private String name;
-	
+	protected int a;
 	//자식 생성자가 부모 생성자에 필요한 값을 받아서
 	//부모 생성자에게 전달함 --> super(값....) : 부모 생성자를 호출하는 부분
 	//자식 생성자가 제일 먼저 해야되는 일이, 부모 생성자를 호출하는 부분
@@ -20,7 +20,7 @@ public class Person extends Animal{
 	
 	@Override
 	public void printAge() {
-		System.out.println(name + "의 나이는 " + age + "입니다.");
+		System.out.println(name + "의 나이는 " + getAge() + "입니다.");
 	}
 	
 	
