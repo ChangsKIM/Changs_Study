@@ -21,6 +21,16 @@ public class EmployeeMain {
 		list.add(new ForeignWorker(3600,"문수영",1));
 		
 		//반복문 - 모든 직원의 정보를 출력
+		for(Employee e : list)
+			e.printEmployeeInfo();
+		
+		//전체 지출되는 급여 금액 출력
+		int totalPay = 0;
+		
+		for(Employee e : list)
+			totalPay += e.getPay();
+		
+		System.out.println("이번 전체 지출되는 급여 비용 : "+ totalPay);
 		
 	}
 
