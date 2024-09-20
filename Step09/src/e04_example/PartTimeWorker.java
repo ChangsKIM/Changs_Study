@@ -11,5 +11,10 @@ public class PartTimeWorker extends Employee{
 		this.payPerHour = payPerHour;
 	}
 	
+	@Override
+	public int getPay() {
+		return workTime * payPerHour / 10000;
+	}
+	
 	
 }
