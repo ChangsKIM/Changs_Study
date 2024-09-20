@@ -2,9 +2,9 @@ package e03_super;
 
 public class Avante {
 	//연료량 - 0 ~ 100
-	private int fuel;
+	protected int fuel;
 	//현재 속도 - 0 ~ 240
-	private int speed;
+	protected int speed;
 
 	public Avante() {
 		fuel = 100;
