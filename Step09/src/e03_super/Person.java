@@ -10,7 +10,6 @@ public class Person extends Animal{
 	public Person(int age) {
 //		System.out.println(age); //부모생성자 실행전에는 다른 코드 삽입 X
 		super(age);
-		// TODO Auto-generated constructor stub
 	}
 
 	public Person(int age, String name) {
