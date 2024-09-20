@@ -15,6 +15,7 @@ public class Avante {
 			System.out.println("현재 연료가 없습니다 채워주세요");
 			return;
 		}
+		System.out.println("액셀을 밟습니다.");
 		speed += 5;
 		if(speed > 240) speed = 240;
 		fuel -= 1;
