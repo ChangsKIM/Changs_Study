@@ -24,6 +24,8 @@ public class IsAMain {
 		System.out.println(System.identityHashCode(g));
 		
 		Animal al = d;
+		//Animal에 Dog 인스턴스 이기 떄문에 Dog는 Person으로 변경 X
+		//Dog와 Person은 관계가 없다.
 		Person pr = (Person) al;
 		pr.eat();
 	}
