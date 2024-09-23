@@ -1,0 +1,27 @@
+package e08_is_a;
+
+public class InstanceOfMain {
+
+	public static void main(String[] args) {
+		Person p = new Person();
+		Animal a = p;//작은 개념이 큰 개념이되는 경우, 자동으로 형변환 됨
+		a.eat();
+		Dog d = new Dog();
+		a = d;
+		a.eat();
+		//큰 개념이 작은 개념으로 형변환 할 경우에는 강제로 형변환 시켜야됨
+		Dog g = (Dog) a;
+		//부모 클래스로 형변환한 인스턴스가 다시 자식 클래스로 형변환 할 때
+		//해당 인스턴스가 원래 자식 클래스 타입인지 확인을 해야됨
+		System.out.println(a instanceof Dog);
+		System.out.println(a instanceof Person);
+		a = p;
+		System.out.println(a instanceof Dog);
+		System.out.println(a instanceof Person);
+		
+	}
+
+}
+
+
+
