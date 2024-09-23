@@ -8,7 +8,7 @@ package e07_has_a;
  * 			재장전
  */
 public class Gun {
-	private int bullet;
+	protected int bullet;
 
 	public Gun() {
 		bullet=12;
