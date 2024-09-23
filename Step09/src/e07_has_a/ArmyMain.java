@@ -9,6 +9,15 @@ public class ArmyMain {
 		for(int i=0;i<20;i++) {
 			army.shot();
 		}
+		System.out.println("-------------");
+		army.changeGun(new K2());
+		for(int i=0;i<20;i++) {
+			army.shot();
+		}
 	}
 
 }
+
+
+
+
