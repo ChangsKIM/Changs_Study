@@ -6,7 +6,7 @@ package e05_quest;
  * 		전원을 켜는 메서드, 전원을 끄는 메서드
  */
 public class Power {
-	private boolean power;
+	protected boolean power;
 
 	public void powerOn() {
 		power = true;
