@@ -1,7 +1,6 @@
 package e05_quest;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class IotApp {
 	private ArrayList<Power> list;
@@ -30,6 +29,11 @@ public class IotApp {
 		for(Power p : list) {
 			p.powerOff();
 		}
+	}
+	
+	//새기기 추가 - 인자값으로 Power를 상속받은 인스턴스들이 들어옴
+	public void addDevice(Power device) {
+		list.add(device);		
 	}
 	
 }
