@@ -2,6 +2,8 @@ package e02_collection;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Vector;
 
 public class ListExample {
 	/*		
@@ -17,7 +19,9 @@ public class ListExample {
 	public static void main(String[] args) {
 		//리스트 생성
 		//ArrayList<리스트에 저장할 데이터의 참조형타입>
-		ArrayList<String> list = new ArrayList<String>();
+//		ArrayList<String> list = new ArrayList<String>();
+		LinkedList<String> list = new LinkedList<String>();
+//		Vector<String> list = new Vector<String>();
 		
 		//데이터 추가
 		list.add("HTML/CSS");
