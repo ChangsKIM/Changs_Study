@@ -4,8 +4,8 @@ public class CloneMain {
 
 	public static void main(String[] args) {
 		Point p1 = new Point(10, 7);
-//		Point p2 = p1.clone();
-		Point p2 = p1;
+		Point p2 = p1.clone();
+//		Point p2 = p1;
 		
 		System.out.println(System.identityHashCode(p1));
 		System.out.println(System.identityHashCode(p2));
