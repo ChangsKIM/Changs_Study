@@ -23,6 +23,7 @@ public class Student {
 
 	@Override
 	public int hashCode() {
+		System.out.println(super.hashCode());
 		return Objects.hash(majorName, score, stduentNo, studentName);
 	}
 

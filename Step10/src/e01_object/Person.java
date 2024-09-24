@@ -18,6 +18,11 @@ public class Person {
 		return "Person [name=" + name + ", age=" + age + "]";
 	}
 	
+	@Override
+	public int hashCode() {
+		return name.hashCode() + age;
+	}
+	
 	//객체 동일한지 비교하는 메서드
 	@Override
 	public boolean equals(Object obj) {
