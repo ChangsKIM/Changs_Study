@@ -1,7 +1,7 @@
 package e01_object;
 
 public class Circle implements Cloneable{
-	private Point pos;
+	public Point pos;
 	private int r;
 
 	public Circle(Point pos, int r) {
