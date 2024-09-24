@@ -1,6 +1,7 @@
 package e02_collection;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ListExample {
 	/*		
@@ -55,8 +56,30 @@ public class ListExample {
 		System.out.println(list.indexOf("react"));
 		System.out.println(list.indexOf("sql"));
 		//리스트에 있는 모든 데이터를 삭제
-		
+//		list.removeAll(list);
+//		list.clear();
+//		System.out.println(list);
 		//리스트에 내용이 하나도 없냐?
+		System.out.println(list.isEmpty());
+		
+		//-------------------------------
+		//데이터 꺼내는 방법 - 1
+		for(int i = 0;i < list.size();i++) {
+			//인덱스 번호를 이용해서 꺼냄
+			System.out.println(list.get(i));
+		}
+		//데이터 꺼내는 방법 - 2
+		//for each 문 데이터를 리스트에서 복사 받아서 이용
+		for(String str : list) {
+			System.out.println(str);
+		}
+		//데이터 꺼내는 방법 - 3
+		//Collection이 공통적으로 데이터를 처음부터 마지막까지 접근할 때 사용
+		Iterator<String> it = list.iterator();
+		
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
 	}
 
 }
