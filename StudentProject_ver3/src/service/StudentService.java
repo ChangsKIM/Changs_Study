@@ -79,12 +79,12 @@ public class StudentService {
 		System.out.print("검색할 학번 입력 : ");
 		studentNo = sc.nextLine(); 
 		
-		Student std = searchStudent(studentNo);
+		int idx = list.indexOf(new Student(studentNo, null, null, 0));
 		
-		if(std == null)
+		if(idx == -1)
 			System.out.println("해당 학생 정보가 없습니다.");
 		else
-			System.out.println(std);
+			System.out.println(list.get(idx));
 	}
 
 	public void deleteStudent() {
