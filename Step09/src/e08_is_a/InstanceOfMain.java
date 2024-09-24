@@ -1,7 +1,18 @@
 package e08_is_a;
 
 public class InstanceOfMain {
-
+	public static void run(Animal a) {
+		//받아온 인스턴스가 Person이면 study 메서드 실행
+		if(a instanceof Person) {
+			Person p = (Person) a;
+			p.study();
+		}
+		//받아온 인스턴스가 Dog면 run 메서드 실행
+		if(a instanceof Dog) {
+			Dog d = (Dog) a;
+			d.run();
+		}
+	}
 	public static void main(String[] args) {
 		Person p = new Person();
 		Animal a = p;//작은 개념이 큰 개념이되는 경우, 자동으로 형변환 됨
@@ -18,7 +29,8 @@ public class InstanceOfMain {
 		a = p;
 		System.out.println(a instanceof Dog);
 		System.out.println(a instanceof Person);
-		
+		run(d);
+		run(p);
 	}
 
 }
