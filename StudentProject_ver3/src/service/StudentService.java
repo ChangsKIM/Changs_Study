@@ -48,7 +48,10 @@ public class StudentService {
 			System.out.print("등록할 학번 입력 : ");
 			studentNo = sc.nextLine();
 			//학번 중복 체크
-			if(searchStudent(studentNo) != null) {
+			//list에서 contains, indexOf에서 실행되는 equals는 
+			//리스트 요소의 equals가 아니라 
+			//비교할 대상의 equals를 쓰기 때문에 String으로 검색 할 수 없다.
+			if(list.contains(new Student(studentNo, null, null, 0))) {
 				System.out.println("학번이 중복되었습니다. 다시 입력해 주세요");
 				continue;
 			}
