@@ -31,12 +31,8 @@ public class Circle implements Cloneable{
 	}
 	
 	public Circle clone() {
-		try {
-			return (Circle) super.clone();
-		} catch (CloneNotSupportedException e) {
-			e.printStackTrace();
-		}
-		return null;
+		Point p = pos.clone();//참조형 데이터도 복제
+		return new Circle(p, r);
 	}
 	
 	
