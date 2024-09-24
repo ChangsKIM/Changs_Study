@@ -95,12 +95,10 @@ public class StudentService {
 		System.out.print("삭제할 학번 입력 : ");
 		studentNo = sc.nextLine(); 
 		
-		Student std = searchStudent(studentNo);
-		
-		if(std == null)
-			System.out.println("삭제할 학생 정보가 없습니다.");
+		if(list.remove(new Student(studentNo, null, null, 0)))
+			System.out.println("학생 정보를 삭제하였습니다.");
 		else
-			list.remove(std);
+			System.out.println("삭제할 학생 정보가 없습니다.");
 		
 	}
 
