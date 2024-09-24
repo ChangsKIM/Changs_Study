@@ -49,9 +49,11 @@ public class ListExample {
 		System.out.println(list);
 		
 		//해당 데이터가 리스트에 있냐?
-		
+		System.out.println(list.contains("react"));
+		System.out.println(list.contains("sql"));
 		//데이터가 몇번째 위치에 있는지?
-		
+		System.out.println(list.indexOf("react"));
+		System.out.println(list.indexOf("sql"));
 		//리스트에 있는 모든 데이터를 삭제
 		
 		//리스트에 내용이 하나도 없냐?
