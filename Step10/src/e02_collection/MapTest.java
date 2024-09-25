@@ -1,0 +1,60 @@
+package e02_collection;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+public class MapTest {
+	/*
+	 * 
+	 * 
+	 */
+	public static void main(String[] args) {
+		HashMap<String, Point> map = new HashMap<>();
+		//데이터 추가
+		map.put("A", new Point(10, 7));
+		map.put("B", new Point(21, 14));
+		map.put("Enemy", new Point(121, 78));
+		map.put("Player", new Point(5, 10));
+		map.put("B", new Point(33, 24));
+		
+		System.out.println(map);
+		//데이터 꺼내기 - 키값 이용함
+		System.out.println(map.get("Player"));
+		System.out.println(map.get("B"));
+		
+		//전체 데이터를 꺼내기 - 1
+		Set<String> key = map.keySet();
+		for(String k : key) {
+			System.out.println(k + " " + map.get(k));
+		}
+		
+		//전체 데이터를 꺼내기 - 2
+		Iterator<String> it = map.keySet().iterator();
+		while(it.hasNext()) {
+			String k = it.next();
+			System.out.println(k + " " + map.get(k));
+		}
+		//키값에 해당하는 데이터가 없으면 null이 나옴
+		System.out.println(map.get("C"));
+		
+		//데이터 삭제
+		
+		//맵에 저장된 데이터 개수
+		
+		//맵에 해당 키값이 있는지?
+		
+		//맵에 해당 데이터가 있는지?
+		
+		//맵에 내용 비우기
+		
+		//맵에 내용이 비었는지?
+		
+	}
+
+}
+
+
+
+
+
