@@ -2,7 +2,7 @@ package e02_collection;
 
 import java.util.Objects;
 
-public class Point implements Cloneable{
+public class Point implements Cloneable, Comparable<Point>{
 	private int x;
 	private int y;
 
@@ -59,6 +59,18 @@ public class Point implements Cloneable{
 		}
 		return null;
 	}
+
+	//Tree의 경우 compareTo로 비교
+	//자신이 작은 경우 음수, 같으면 0, 비교대상값이 크면 양수
+	@Override
+	public int compareTo(Point o) {
+		if(x != o.x) 
+			return x - o.x;
+		if(y != o.y)
+			return y - o.y;
+		return 0;
+	}
+
 }
 
 
