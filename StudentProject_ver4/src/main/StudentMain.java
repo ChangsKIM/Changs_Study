@@ -2,6 +2,8 @@ package main;
 
 import java.util.Scanner;
 
+import controller.Controller;
+import controller.HandlerMapping;
 import service.StudentService;
 
 public class StudentMain {
@@ -35,29 +37,14 @@ public class StudentMain {
 	        int no = sc.nextInt();
 	        sc.nextLine();
 	        //0일때 반복문 종료
+	        if(no == 0) return;
+	        //Controller 받아옴
+	        Controller controller = 
+	        		HandlerMapping.getInstance().createController(no);
 	        
-	        switch(no) {
-	        case 0:
-	        	return;
-	        case 1:
-	        	service.insertStudent();
-	        	break;
-	        case 2:
-	        	service.searchStudent();
-	        	break;
-	        case 3:
-	        	service.deleteStudent();
-	        	break;
-	        case 4:
-	        	service.updateStudent();
-	        	break;
-	        case 5:
-	        	service.printAllStudent();
-	        	break;
-	        case 6:
-	        	service.searchStudentName();
-	        	break;
-	        }//switch
+	        //작업 시작
+	        if(controller != null)
+	        	controller.execute();
 		}//while
 	}//main
 
