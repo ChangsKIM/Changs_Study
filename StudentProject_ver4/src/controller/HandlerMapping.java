@@ -12,6 +12,15 @@ public class HandlerMapping {
 	}
 
 	//작업자를 생성해서 리턴하는 메서드
-	
+	public Controller createController(int no) {
+		Controller controller = null;
+		
+		return controller;
+	}
 	
 }
+
+
+
+
+
