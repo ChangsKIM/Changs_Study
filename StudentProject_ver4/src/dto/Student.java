@@ -63,7 +63,6 @@ public class Student {
 
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("equals");
 		if (this == obj)
 			return true;
 		if (obj == null)

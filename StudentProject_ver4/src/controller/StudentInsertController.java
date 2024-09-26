@@ -23,7 +23,7 @@ public class StudentInsertController implements Controller {
 			//list에서 contains, indexOf에서 실행되는 equals는 
 			//리스트 요소의 equals가 아니라 
 			//비교할 대상의 equals를 쓰기 때문에 String으로 검색 할 수 없다.
-			if(list.contains(new Student(studentNo, null, null, 0))) {
+			if(service.getList().contains(new Student(studentNo, null, null, 0))) {
 				System.out.println("학번이 중복되었습니다. 다시 입력해 주세요");
 				continue;
 			}
@@ -38,8 +38,14 @@ public class StudentInsertController implements Controller {
 		sc.nextLine();
 				
 		//서비스 클래스로 입력받은 데이터를 전달
+		boolean result = service.insertStudent(
+				new Student(studentNo, studentName, majorName, score));
 		
 		//서비스 클래스가 일한 결과를 받아서 출력
+		if(result)
+			System.out.println("학생정보 추가 완료.");
+		else
+			System.out.println("학생정보 추가 실패.");
 	}
 
 }

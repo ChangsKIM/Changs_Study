@@ -23,12 +23,13 @@ public class StudentService {
 		return instance;
 	}
 	
+	public ArrayList<Student> getList() {
+		return list;
+	}
 	
-	public void insertStudent() {
-		
+	public boolean insertStudent(Student student) {
 		//리스트에 학생정보 추가
-		list.add(new Student(studentNo, studentName, majorName, score));
-		
+		return list.add(student);
 	}
 
 	public void searchStudent() {
