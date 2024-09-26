@@ -32,20 +32,15 @@ public class StudentService {
 		return list.add(student);
 	}
 
-	public void searchStudent() {
-		Scanner sc = new Scanner(System.in);
-		String studentNo;
-		//학번 입력 받음
-		System.out.println("학생 정보 검색을 시작합니다.....");
-		System.out.print("검색할 학번 입력 : ");
-		studentNo = sc.nextLine(); 
+	//검색할 학번을 인자값으로 받음
+	public Student searchStudent(String studentNo) {
 		
 		int idx = list.indexOf(new Student(studentNo, null, null, 0));
 		
 		if(idx == -1)
-			System.out.println("해당 학생 정보가 없습니다.");
+			return null;
 		else
-			System.out.println(list.get(idx));
+			return list.get(idx);//검색 결과 인덱스 번호로 데이터 뽑아서 전달
 	}
 
 	public void deleteStudent() {
