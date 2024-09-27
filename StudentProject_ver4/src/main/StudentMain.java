@@ -24,7 +24,7 @@ public class StudentMain {
 		StudentService service = StudentService.getInstance();
 		
 		while(true) {
-			System.out.println("학적관리 프로그램 버전 - 2");
+			System.out.println("학적관리 프로그램 버전 - 4");
 	        System.out.println("1. 학생 데이터 등록");
 	        System.out.println("2. 학생 데이터 검색");
 	        System.out.println("3. 학생 데이터 삭제");
