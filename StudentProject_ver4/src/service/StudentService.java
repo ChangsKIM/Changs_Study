@@ -47,26 +47,19 @@ public class StudentService {
 		return list.remove(new Student(studentNo, null, null, 0));
 	}
 
-	public void searchStudentName() {
-		System.out.println("학생 이름 일부로 검색을 시작합니다.");
-		Scanner sc = new Scanner(System.in);
-		//학생 이름 일부 입력
-		System.out.print("학생 이름 일부 : ");
-		String name = sc.nextLine();
+	public ArrayList<Student> searchStudentName(String name) {
+		//검색 결과 저장할 리스트
+		ArrayList<Student> result = new ArrayList<Student>();
 		
-		int count = 0;
 		//반복문
 		for(int i=0;i<list.size();i++) {
 		//	입력한 검색어가 학생 이름에 있는지 확인 후 출력
 			if(list.get(i).getStudentName().indexOf(name) != -1) {
-				System.out.println(list.get(i));
-				count++;
+				result.add(list.get(i));
 			}
 		}
 		
-		//검색 결과가 없으면, '해당 검색결과가 없습니다.' 메세지 출력
-		if(count == 0) System.out.println("해당 검색 결과가 없습니다.");
-		else System.out.println(count +"건이 검색 되었습니다.");
+		return result;
 	}
 
 	
