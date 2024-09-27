@@ -43,19 +43,8 @@ public class StudentService {
 			return list.get(idx);//검색 결과 인덱스 번호로 데이터 뽑아서 전달
 	}
 
-	public void deleteStudent() {
-		Scanner sc = new Scanner(System.in);
-		String studentNo;
-		//학번 입력 받음
-		System.out.println("학생 정보 삭제를 시작합니다.....");
-		System.out.print("삭제할 학번 입력 : ");
-		studentNo = sc.nextLine(); 
-		
-		if(list.remove(new Student(studentNo, null, null, 0)))
-			System.out.println("학생 정보를 삭제하였습니다.");
-		else
-			System.out.println("삭제할 학생 정보가 없습니다.");
-		
+	public boolean deleteStudent(String studentNo) {	
+		return list.remove(new Student(studentNo, null, null, 0));
 	}
 
 	public void updateStudent() {
