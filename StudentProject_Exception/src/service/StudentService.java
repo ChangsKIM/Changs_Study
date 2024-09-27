@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import dto.Student;
+import exception.StudentException;
 
 public class StudentService {
 	private static StudentService instance;
@@ -27,7 +28,10 @@ public class StudentService {
 		return list;
 	}
 	
-	public boolean insertStudent(Student student) {
+	public boolean insertStudent(Student student) throws StudentException {
+		if(searchStudent(student.getStudentNo()) != null ) {
+			throw new StudentException("학번이 중복되었습니다. 학생정보 추가 실패");
+		}
 		//리스트에 학생정보 추가
 		return list.add(student);
 	}
