@@ -77,13 +77,6 @@ public class StudentService {
 		
 	}
 
-	public void printAllStudent() {
-		//전체 학생 정보 출력
-		for(Student std : list) {
-			System.out.println(std);
-		}
-		
-	}
 
 	public void searchStudentName() {
 		System.out.println("학생 이름 일부로 검색을 시작합니다.");
