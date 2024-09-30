@@ -19,6 +19,32 @@ public class LamdaEx1 {
 	 */
 	public static void main(String[] args) {
 		//Calcurator 익명클래스로 만들어서 덧셈하는 기능을 작성
+		Calcurator sum = new Calcurator() {
+			@Override
+			public int calc(int x, int y) {
+				return x + y;
+			}
+		};
+		System.out.println(sum.calc(10, 20));
+		Calcurator calc = (a, b) -> a + b;
+		System.out.println(calc.calc(10,30));
+		//뺄셈
+		Calcurator minus = (x, y) -> x - y;
+		System.out.println(minus.calc(10,30));
+		//두 숫자중에 큰숫자 리턴
+		Calcurator max = (x,y) -> x > y ? x : y;
+		System.out.println(max.calc(10,30));
+		
+		Calcurator total = (x,y) -> {
+			//x부터 y까지 합 리턴
+			int s = 0;
+
+			for(int i=x;i<=y;i++) s += i;
+			
+			return s;
+		};
+		System.out.println(total.calc(1, 100));
+		
 	}
 
 }
