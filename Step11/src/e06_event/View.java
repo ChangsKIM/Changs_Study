@@ -23,6 +23,11 @@ public class View {
 	public static interface OnClickListener{
 		public void onClick(View view);
 	}
+
+	public String getName() {
+		return name;
+	}
+
 	
 }
 
