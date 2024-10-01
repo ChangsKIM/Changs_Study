@@ -8,11 +8,13 @@ import java.io.IOException;
 public class TextFileReaderMain1 {
 
 	public static void main(String[] args) {
+		BufferedReader br = null;
+		FileReader fr = null;
 		try {
 			//1. 노드 스트림 연결(빨대 꼽기) 
-			FileReader fr = new FileReader("c:\\test\\notice.txt");
+			fr = new FileReader("c:\\test\\notice.txt");
 			//2. 프로세스 스트림 연결
-			BufferedReader br = new BufferedReader(fr);
+			br = new BufferedReader(fr);
 			
 			//3. 데이터를 읽어옴
 //			while(true) {
@@ -28,6 +30,13 @@ public class TextFileReaderMain1 {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				if(br != null) br.close();
+				if(fr != null) fr.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	
 	
