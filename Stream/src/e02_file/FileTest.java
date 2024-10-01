@@ -1,6 +1,9 @@
 package e02_file;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class FileTest {
 
@@ -28,7 +31,12 @@ public class FileTest {
 		System.out.println(file.exists());
 		//파일명
 		System.out.println(file.getName());
-		
+		//현채 파일의 부모 폴더 경로를 파일 객체로 뽑음
+		File parentPath = file.getParentFile().getParentFile();
+		System.out.println(parentPath.getAbsolutePath());
+		String[] arr = parentPath.list();
+		for(String str : arr)
+			System.out.println(str);
 	}
 
 }
