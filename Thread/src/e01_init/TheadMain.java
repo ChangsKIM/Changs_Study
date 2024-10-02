@@ -13,8 +13,9 @@ public class TheadMain {
 		
 		//스레드에게 작업을 시작
 		//스레드의 start() 메서드로 작업을 시작
-		for(int i=0;i<list.size();i++)
-			list.get(i).start();
+//		for(int i=0;i<list.size();i++)
+//			list.get(i).start();
+		list.forEach(t -> t.start());
 		
 	}
 
