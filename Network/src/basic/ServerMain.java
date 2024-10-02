@@ -10,6 +10,7 @@ import java.net.Socket;
 public class ServerMain {
 
 	public static void main(String[] args) {
+		System.out.println("서버프로그램을 실행합니다......");
 		//1. 서버 오픈
 		try (ServerSocket server = new ServerSocket(1234);
 				//2. 클라이언트 접속을 받음
