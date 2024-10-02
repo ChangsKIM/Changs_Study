@@ -8,7 +8,15 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ServerMain {
+	/*
+	  	서버 프로그램
+	    포트번호 3333 서버 오픈
+	    클라이언트 접속을 받은 후
+	    클라이언트로 부터 숫자를 하나 받음
+	    받은 숫자의 제곱을 클라이언트에게 전송
 
+	    주고 받는 데이터는 문자열로 보내고 받고
+	 */
 	public static void main(String[] args) {
 		try (ServerSocket server = new ServerSocket(3333);
 			Socket client = server.accept();) {
