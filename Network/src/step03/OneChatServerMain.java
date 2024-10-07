@@ -1,0 +1,33 @@
+package step03;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class OneChatServerMain {
+
+	public static void main(String[] args) {
+		try(ServerSocket server = new ServerSocket(3333);
+				Scanner sc = new Scanner(System.in)){
+			System.out.println("서버가 오픈되었습니다. 포트번호 - 3333");
+			Socket client = server.accept();
+			System.out.println(client.getInetAddress()
+					+ " 클라이언트가 접속하였습니다.");
+			//--------------------------------------------
+			//1. 상대방이 보낸 메세지를 받아서 출력할 스레드 생성
+			
+			//2. 출력 스트림 생성해서, 사용자로부터 메세지 받아서 전송
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
+
+
+
+
+
+
