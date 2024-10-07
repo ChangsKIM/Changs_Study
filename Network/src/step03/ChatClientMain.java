@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
@@ -24,7 +23,7 @@ public class ChatClientMain {
 				while(true) {
 					String str = br.readLine();
 					if(str.equals("exit")) break;
-					System.out.println(str);
+					System.out.println(server.getInetAddress() + "님의 메세지 : " + str);
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -44,8 +43,7 @@ public class ChatClientMain {
 			while(true) {
 				System.out.println("보낼 메세지 작성");
 				String str = sc.nextLine();
-				pw.println(server.getInetAddress() 
-						+" 님이 보낸 메세지 : " + str);
+				pw.println(str);
 				pw.flush();
 				if(str.equals("exit")) break;
 			}
