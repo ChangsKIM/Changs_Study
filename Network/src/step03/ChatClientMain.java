@@ -9,7 +9,26 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class ChatClientMain {
+ 
+	private static class Worker extends Thread{
+		private Socket server;
 
+		public Worker(Socket server) {
+			this.server = server;
+		}
+		
+		@Override
+		public void run() {
+			try(BufferedReader br = new BufferedReader(
+					new InputStreamReader(server.getInputStream()))){
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		
+	}
 	public static void main(String[] args) {
 		try(Socket server = new Socket("127.0.0.1",3333);
 				Scanner sc = new Scanner(System.in)){
