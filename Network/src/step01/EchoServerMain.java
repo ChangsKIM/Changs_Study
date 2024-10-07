@@ -23,7 +23,7 @@ public class EchoServerMain {
 			//4. 입출력 처리
 			//	exit 메시지를 받을때 까지 진행
 			String str = null;
-			while((str = br.readLine()).equals("exit")) {
+			while(!(str = br.readLine()).equals("exit")) {
 				pw.println(str);
 				pw.flush();
 			}
