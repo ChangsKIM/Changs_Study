@@ -3,6 +3,7 @@ package step03;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
@@ -34,7 +35,15 @@ public class OneChatServerMain {
 			});
 			t.start();
 			//2. 출력 스트림 생성해서, 사용자로부터 메세지 받아서 전송
-			
+			PrintWriter pw = new PrintWriter(client.getOutputStream());
+			while(true) {
+				System.out.println("보낼 메세지 작성");
+				String str = sc.nextLine();
+				pw.println(server.getInetAddress() 
+						+" 님이 보낸 메세지 : " + str);
+				pw.flush();
+				if(str.equals("exit")) break;
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
