@@ -31,6 +31,8 @@ public class ServerWorker extends Thread {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			MultiEchoServerMain.removeClient(this);
 		}
 
 	}

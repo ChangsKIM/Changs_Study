@@ -6,10 +6,16 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class MultiEchoServerMain {
-
+	//접속한 클라이언트 관리
+	private static ArrayList<ServerWorker> list = new ArrayList<ServerWorker>();
+	
+	//종료된 스레드를 제거하는 메서드
+	public static void removeClient(ServerWorker worker) {
+		list.remove(worker);
+	}
+	
+	
 	public static void main(String[] args) {
-		//접속한 클라이언트 관리
-		ArrayList<ServerWorker> list = new ArrayList<ServerWorker>();
 		// 1. 서버 오픈
 		try (ServerSocket server = new ServerSocket(2222)) {
 			System.out.println("서버 오픈 - 포트번호 2222");
