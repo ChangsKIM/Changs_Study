@@ -11,11 +11,11 @@ public class ObjectWriteTest {
 	public static void main(String[] args) {
 		ArrayList<Person> list = new ArrayList<Person>();
 
-		list.add(new Person("김씨", 20));
-		list.add(new Person("이씨", 12));
-		list.add(new Person("박씨", 22));
-		list.add(new Person("곽씨", 45));
-		list.add(new Person("정씨", 32));
+		list.add(new Person("Kim", 20));
+		list.add(new Person("Lee", 12));
+		list.add(new Person("Park", 22));
+		list.add(new Person("June", 45));
+		list.add(new Person("James", 32));
 		
 		//파일 연결 부분
 		try(FileOutputStream fos = new FileOutputStream("person.dat");
