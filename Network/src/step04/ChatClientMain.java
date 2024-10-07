@@ -32,7 +32,7 @@ public class ChatClientMain {
 	}
 	
 	public static void main(String[] args) {
-		try(Socket server = new Socket("127.0.0.1",3333);
+		try(Socket server = new Socket("192.168.20.123",2222);
 				Scanner sc = new Scanner(System.in)){
 			System.out.println("서버에 접속했습니다.");
 			//상대방이 보낸 메세지를 받아서 출력하는 스레드 실행
