@@ -1,6 +1,8 @@
 package step03;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
@@ -16,7 +18,21 @@ public class OneChatServerMain {
 					+ " 클라이언트가 접속하였습니다.");
 			//--------------------------------------------
 			//1. 상대방이 보낸 메세지를 받아서 출력할 스레드 생성
-			
+			Thread t = new Thread(() -> {
+				try(BufferedReader br = 
+						new BufferedReader(
+								new InputStreamReader(client.getInputStream()))){
+					while(true) {
+						String str = br.readLine();
+						if(str.equals("exit")) break;
+						System.out.println(str);
+					}
+					
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			});
+			t.start();
 			//2. 출력 스트림 생성해서, 사용자로부터 메세지 받아서 전송
 			
 		} catch (IOException e) {
