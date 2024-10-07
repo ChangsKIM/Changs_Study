@@ -21,14 +21,17 @@ public class ChatClientMain {
 		public void run() {
 			try(BufferedReader br = new BufferedReader(
 					new InputStreamReader(server.getInputStream()))){
-				
+				while(true) {
+					String str = br.readLine();
+					if(str.equals("exit")) break;
+					System.out.println(str);
+				}
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
-		
-		
 	}
+	
 	public static void main(String[] args) {
 		try(Socket server = new Socket("127.0.0.1",3333);
 				Scanner sc = new Scanner(System.in)){
