@@ -37,6 +37,9 @@ public class ChatClientMain {
 				Scanner sc = new Scanner(System.in)){
 			System.out.println("서버에 접속했습니다.");
 			
+			Worker worker = new Worker(server);
+			worker.start();
+			
 			PrintWriter pw = new PrintWriter(server.getOutputStream());
 			while(true) {
 				System.out.println("보낼 메세지 작성");
