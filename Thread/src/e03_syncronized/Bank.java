@@ -14,7 +14,7 @@ public class Bank {
 		return instance;
 	}
 	
-	public int withdraw(int m) {
+	public synchronized int withdraw(int m) {
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
