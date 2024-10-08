@@ -15,6 +15,11 @@ public class Bank {
 	}
 	
 	public int withdraw(int m) {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		money -= m;
 		return money;
 	}
